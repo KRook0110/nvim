@@ -1,0 +1,31 @@
+{
+    "name": "custom-snippets",
+    "contributes": {
+        "snippets": [
+            {
+                "language" : [ "cpp"],
+                "path" : "./cpp.json"
+            },
+            {
+                "language": [
+                    "tex"
+                ],
+                "path": "latex.json"
+            },
+            {
+                "language": [
+                    "typescript",
+                    "typescriptreact"
+                ],
+                "path": "typescript.json"
+            },
+            {
+                "language": [
+                    "javascriptreact"
+                ],
+                "path": "javascriptreact.json"
+            }
+
+        ]
+    }
+}
