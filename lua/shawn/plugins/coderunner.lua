@@ -6,14 +6,14 @@ return {
             filetype = {
                 bash = [[ source "$filename" ]],
                 -- cpp = "cd $dir && g++ $fileName -o $fileNameWithoutExt && start cmd /c \"$fileNameWithoutExt.exe && pause\"",
-                cpp = [[ cd $dir && g++ "$fileName" -o "$fileNameWithoutExt" -Wall -O2 && "./$fileNameWithoutExt" ]],
+                cpp = [[ cd $dir && g++ $fileName -o $fileNameWithoutExt -Wall -O2 && ./$fileNameWithoutExt ]],
                 -- c = "cd $dir &&": gcc $fileName -o $fileNameWithoutExt && start cmd /c \"./$fileNameWithoutExt.exe && pause\"",
-                c = [[ cd $dir && gcc "$fileName" -o "$fileNameWithoutExt" && "./$fileNameWithoutExt"]],
+                c = [[ cd $dir && gcc $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt]],
                 rust = [[ cargo build && cargo run ]],
                 python = "python3 $file",
                 js = [[ cd $dir & node $file ]],
                 go = [[ go run . ]],
-                swift = [[ swift "$fileName" ]],
+                swift = [[ swift $fileName ]],
             },
         })
 

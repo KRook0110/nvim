@@ -18,6 +18,7 @@ return {
 		-- see below for full list of optional dependencies 👇
 	},
 	opts = {
+        disable_frontmatter = true,
 		workspaces = {
 			{
 				name = "Personal",
@@ -28,11 +29,11 @@ return {
         ui = {
             enable = false,
         },
-		mappings = {
-			["<cr>"] = {
-				opts = { buffer = true, expr = true },
-			},
-		},
+		-- mappings = {
+		-- 	["<cr>"] = {
+		-- 		opts = { buffer = true, expr = true },
+		-- 	},
+		-- },
 		-- see below for full list of options 👇
 	},
 }

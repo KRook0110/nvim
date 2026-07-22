@@ -1,8 +1,7 @@
 return {
 	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.8",
-		-- or                              , branch = '0.1.x',
+        version = "*",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope-fzf-native.nvim",
@@ -27,6 +26,7 @@ return {
 						"node_modules",
 						"node_modules/",
 						".git/",
+                        "build/"
 					},
 				},
 				pickers = {

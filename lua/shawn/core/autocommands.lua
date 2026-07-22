@@ -19,6 +19,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 })
 
 -- disables auto indent on comment line
+
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "*",
 	callback = function()
@@ -76,13 +77,13 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- Highlight on Yank
 
--- vim.api.nvim_create_autocmd("TextYankPost",
---     {
---         callback = function()
---             vim.highlight.on_yank({ hlgroup = "IncSearch", timeout = 300 })
---         end
---     }
--- )
+vim.api.nvim_create_autocmd("TextYankPost",
+    {
+        callback = function()
+            vim.highlight.on_yank({ hlgroup = "IncSearch", timeout = 300 })
+        end
+    }
+)
 
 -- When in json use spaces
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {

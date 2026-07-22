@@ -34,7 +34,7 @@ map({ "n" }, "K", function()
 		border = "rounded",
 	})
 end)
-vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show diagnostics float" })
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show diagnostics" })
 
 
 -- inlay hints
@@ -48,6 +48,13 @@ end, { desc = "Toggle Inlay Hint" })
 -- map({ "n", "i" }, "<C-k>", ":wincmd k<CR>", opts)
 -- map({ "n", "i" }, "<C-l>", ":wincmd l<CR>", opts)
 -- map({ "n", "i" }, "<C-h>", ":wincmd h<CR>", opts)
+
+-- marks bindings
+--
+-- Make ' jump to the exact mark (line and column)
+vim.keymap.set("n", "'", "`", { desc = "Jump to exact mark column" })
+-- Optional: Make ` jump to the start of the line instead
+vim.keymap.set("n", "`", "'", { desc = "Jump to mark line" })
 
 -- window resize
 map("n", "<Up>", ":res +1<CR>", opts)

@@ -21,12 +21,12 @@ return {
 
 		-- Keymaps
         vim.fn.sign_define("DapBreakpoint", { text = "●", texthl = "", linehl = "", numhl = "" })
-		vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint)
-		vim.keymap.set("n", "<leader>B", dap.clear_breakpoints)
+		vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint,{ desc = "toggle breakpoint"})
+		vim.keymap.set("n", "<leader>B", dap.clear_breakpoints, {desc = "clear breakpoints"})
 		vim.keymap.set("n", "<space>?", function()
 			dapui.eval(nil, { enter = true })
 		end)
-		vim.keymap.set("n", "gb", dap.run_to_cursor)
+		vim.keymap.set("n", "gb", dap.run_to_cursor, {desc="Debug run to cursor"})
 		vim.keymap.set("n", "<F1>", dap.continue)
 		vim.keymap.set("n", "<F2>", dap.step_into)
 		vim.keymap.set("n", "<F3>", dap.step_over)
