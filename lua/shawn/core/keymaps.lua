@@ -28,6 +28,7 @@ map("n", "<leader>n", ":noh<CR>", opts)
 -- map({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 -- map({ "n", "x" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 
+
 -- LSP
 map({ "n" }, "K", function()
 	vim.lsp.buf.hover({

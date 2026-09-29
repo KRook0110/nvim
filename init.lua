@@ -4,13 +4,13 @@ require("shawn.lazy")
 
 -- vim.cmd.colorscheme "catppuccin-mocha"
 -- vim.cmd.colorscheme("tokyonight")
-vim.cmd.colorscheme("rose-pine-main")
+-- vim.cmd.colorscheme("rose-pine-main")
 -- vim.cmd.colorscheme("nord")
 -- vim.cmd.colorscheme "everforest"
 -- vim.cmd.colorscheme "catppuccin-macchiato"
 -- vim.cmd.colorscheme "monokai-pro-default"
 -- vim.cmd.colorscheme "gruvbox-material"
--- vim.cmd.colorscheme "gruvbox"
+vim.cmd.colorscheme "gruvbox"
 
 
 -- Colors
