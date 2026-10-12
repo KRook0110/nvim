@@ -13,6 +13,7 @@ return {
 				python = { "autopep8" },
 				cpp = { "clang-format" },
 				c = { "clang-format" },
+                cmake = {"cmake-format"},
 
 				css = { "prettierd" },
 				html = { "prettierd" },
@@ -32,7 +33,7 @@ return {
 		cf["clang-format"] = {
 			-- inherit=false,
 			-- command="clang-format",
-			args = {"--style={BasedOnStyle: LLVM,IndentWidth: 4}"}
+			args = {"--style={BasedOnStyle: LLVM,IndentWidth: 4,Cpp11BracedListStyle: false}"}
 			-- args = { "--style={BasedOnStyle: Google,IndentWidth: 4}" },
 		}
 
