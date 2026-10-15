@@ -3,10 +3,10 @@ vim.g.maplocalleader = " "
 local opts = { noremap = true, silent = true }
 local map = vim.keymap.set
 
--- -- auto brackets
--- map("i", "{<CR>", "{<CR><CR>}<Esc>kcc")
--- map("i", "(<CR>", "(<CR><CR>)<Esc>kcc")
--- map("i", "[<CR>", "[<CR><CR>]<Esc>kcc")
+-- auto brackets
+map("i", "{<CR>", "{<CR><CR>}<Esc>kcc")
+map("i", "(<CR>", "(<CR><CR>)<Esc>kcc")
+map("i", "[<CR>", "[<CR><CR>]<Esc>kcc")
 
 -- line navigation
 -- map("n", "J", "mzJ'z", opts)
