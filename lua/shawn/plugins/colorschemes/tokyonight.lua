@@ -2,7 +2,7 @@ return  {
     "folke/tokyonight.nvim",
     config = function()
         require("tokyonight").setup{
-            transparent = true,
+            transparent = false,
             -- dim_inactive = false, -- dims inactive windows
             -- on_highlights = function(hl, c)
             --     hl.LineNr = {

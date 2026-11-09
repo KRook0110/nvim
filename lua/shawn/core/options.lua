@@ -42,9 +42,13 @@ opt.joinspaces = false
 -- code wrap
 opt.wrap = true
 opt.linebreak = true
-opt.foldmethod = "marker"
-opt.foldlevel = 10
 opt.modelines = 1
+
+-- folds
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldtext = ""        -- Neovim 0.10+: uses built-in syntax-highlighted fold text
+vim.opt.foldlevel = 99       -- Ensure files open unfolded by default
 
 -- undo file backup
 opt.swapfile = false

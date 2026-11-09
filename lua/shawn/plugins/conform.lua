@@ -10,6 +10,7 @@ return {
 				-- javascript = { { "prettierd", "prettier" } },
 				-- cpp = {"clang-format"},
 
+                markdown = {"prettier"},
 				python = { "autopep8" },
 				cpp = { "clang-format" },
 				c = { "clang-format" },
@@ -27,15 +28,6 @@ return {
 			-- },
 		})
 
-		-- Configs
-		local cf = require("conform").formatters
-
-		cf["clang-format"] = {
-			-- inherit=false,
-			-- command="clang-format",
-			args = {"--style={BasedOnStyle: LLVM,IndentWidth: 4,Cpp11BracedListStyle: false}"}
-			-- args = { "--style={BasedOnStyle: Google,IndentWidth: 4}" },
-		}
 
 		vim.keymap.set("n", "<leader>pf", function()
 			require("conform").format({

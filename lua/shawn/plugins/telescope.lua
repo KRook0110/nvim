@@ -44,8 +44,8 @@ return {
 			vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 			vim.keymap.set("n", "<leader>fd", ":Telescope fd find_command=fd,-t=d disable_devicons=true previewer=false<CR> ", { desc = "Directories" })
-			vim.keymap.set("n", "<leader>fw",builtin.lsp_workspace_symbols, { desc = "Telescope Workspace Symbols" })
-			vim.keymap.set("n", "<leader>ft",builtin.treesitter, { desc = "Telescope Treesitter" })
+			vim.keymap.set("n", "<leader>fW",builtin.lsp_workspace_symbols, { desc = "Telescope Workspace Symbols" })
+			vim.keymap.set("n", "<leader>fw",builtin.lsp_document_symbols, { desc = "Telescope Document Symbols" })
 			-- LSP
 			vim.keymap.set("n", "grr", builtin.lsp_references, { desc = "Telescope Lsp references" })
 			vim.keymap.set("n", "gri", builtin.lsp_implementations, { desc = "Telescope Lsp references" })

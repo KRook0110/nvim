@@ -1,18 +1,19 @@
 require("shawn.core")
 require("shawn.lazy")
 
+-- Colors
 
 -- vim.cmd.colorscheme "catppuccin-mocha"
--- vim.cmd.colorscheme("tokyonight")
+vim.cmd.colorscheme("tokyonight-night")
 -- vim.cmd.colorscheme("rose-pine-main")
 -- vim.cmd.colorscheme("nord")
 -- vim.cmd.colorscheme "everforest"
 -- vim.cmd.colorscheme "catppuccin-macchiato"
 -- vim.cmd.colorscheme "monokai-pro-default"
-vim.cmd.colorscheme "gruvbox-material"
+-- vim.cmd.colorscheme "gruvbox-material"
 -- vim.cmd.colorscheme "gruvbox"
+-- vim.cmd.colorscheme "kanagawa-dragon"
 
--- Colors
 
 -- Pink-900 : #51B3EC
 -- Pink-700 : #FDA8C7

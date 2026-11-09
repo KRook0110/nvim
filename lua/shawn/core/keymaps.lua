@@ -52,10 +52,10 @@ end, { desc = "Toggle Inlay Hint" })
 
 -- marks bindings
 --
--- Make ' jump to the exact mark (line and column)
-vim.keymap.set("n", "'", "`", { desc = "Jump to exact mark column" })
--- Optional: Make ` jump to the start of the line instead
-vim.keymap.set("n", "`", "'", { desc = "Jump to mark line" })
+-- -- Make ' jump to the exact mark (line and column)
+-- vim.keymap.set("n", "'", "`", { desc = "Jump to exact mark column" })
+-- -- Optional: Make ` jump to the start of the line instead
+-- vim.keymap.set("n", "`", "'", { desc = "Jump to mark line" })
 
 -- window resize
 map("n", "<Up>", ":res +1<CR>", opts)
