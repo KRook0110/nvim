@@ -9,7 +9,7 @@ return {
 			ts.setup()
 
 			-- Install desired parsers if they are not already installed
-			local parsers = { "python", "cpp", "c", "lua", "vim", "vimdoc", "query" , "c_sharp" }
+			local parsers = { "python", "cpp", "c", "lua", "vim", "vimdoc", "query", "c_sharp" }
 			local installed = ts.get_installed()
 			local to_install = vim.tbl_filter(function(p)
 				return not vim.list_contains(installed, p)

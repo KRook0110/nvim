@@ -74,23 +74,6 @@ return {
 			},
 		})
 
-		vim.lsp.config("omnisharp", {
-			capabilities = capabilities,
-			cmd = {
-				"dotnet",
-				vim.fn.stdpath("data") .. "\\mason\\packages\\omnisharp\\libexec\\OmniSharp.dll",
-			},
-			settings = {
-				FormattingOptions = {
-					EnableEditorConfigSupport = false,
-					OrganizeImports = true,
-				},
-				Sdk = {
-					IncludePrereleases = true,
-				},
-			},
-		})
-
 		vim.lsp.config("sourcekit", {
 			filetypes = { "swift" }, -- remove c, cpp
 			-- root_dir = lsp_config.util.root_pattern(".git", "Package.swift", "compile_commands.json"),
