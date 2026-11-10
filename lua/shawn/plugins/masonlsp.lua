@@ -5,28 +5,27 @@ return {
 		-- "SmiteshP/nvim-navic",
 		"neovim/nvim-lspconfig",
 		"hrsh7th/cmp-nvim-lsp",
-        "jay-babu/mason-nvim-dap.nvim"
+		"jay-babu/mason-nvim-dap.nvim",
 	},
 	lazy = false,
 	-- event = "VeryLazy",
 
 	config = function()
 		local mason = require("mason")
-        local masondap = require("mason-nvim-dap")
+		local masondap = require("mason-nvim-dap")
 		local mason_lspconfig = require("mason-lspconfig")
 		local lsp_config = require("lspconfig")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
 		mason.setup({})
-        masondap.setup({
-            handlers = {}
-        })
+		masondap.setup({
+			handlers = {},
+		})
 		mason_lspconfig.setup({
 			ensure_installed = { "lua_ls" },
 			automatic_installation = true,
 			automatic_enable = true,
 		})
-
 
 		local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
@@ -71,6 +70,23 @@ return {
 							[vim.fn.stdpath("config") .. "/lua"] = true,
 						},
 					},
+				},
+			},
+		})
+
+		vim.lsp.config("omnisharp", {
+			capabilities = capabilities,
+			cmd = {
+				"dotnet",
+				vim.fn.stdpath("data") .. "\\mason\\packages\\omnisharp\\libexec\\OmniSharp.dll",
+			},
+			settings = {
+				FormattingOptions = {
+					EnableEditorConfigSupport = false,
+					OrganizeImports = true,
+				},
+				Sdk = {
+					IncludePrereleases = true,
 				},
 			},
 		})
