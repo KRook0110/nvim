@@ -119,6 +119,27 @@ return {
 				},
 			},
 		})
+		vim.lsp.config("omnisharp", {
+			-- Optional: explicitly point to Mason's binary if it's not automatically picked up on PATH
+			-- cmd = { vim.fn.stdpath("data") .. "/mason/bin/OmniSharp" },
+
+			-- Root markers for Unity projects (nested tables give equal priority)
+			root_markers = { { "*.sln", "*.csproj" }, "ProjectSettings", ".git" },
+
+			-- Note: Modern nvim-lspconfig passes settings as nested tables rather than flat snake_case keys
+			settings = {
+				FormattingOptions = {
+					EnableEditorConfigSupport = true,
+					OrganizeImports = true,
+				},
+				RoslynExtensionsOptions = {
+					EnableAnalyzersSupport = true,
+					EnableImportCompletion = true,
+					EnableDecompilationSupport = true,
+				},
+			},
+		})
+        vim.lsp.enable("omnisharp")
 
 		vim.lsp.config("cssls", {
 			cmd = { "vscode-css-language-server", "--stdio" },
