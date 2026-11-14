@@ -58,7 +58,7 @@ return {
 		vim.cmd("highlight! TabLineFill guibg=NONE guifg=white")
 
 		local opts = { silent = true, noremap = true }
-		vim.keymap.set("n", "<leader>ja", function()
+		vim.keymap.set("n", "<leader>a", function()
 			require("harpoon.mark").add_file()
 		end, { desc = "harpoon add file" })
 		vim.keymap.set("n", "<leader>jr", function()
